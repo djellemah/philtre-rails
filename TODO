@@ -1,0 +1,4 @@
+philtre-rails:
+ ☐ railties so it can just be included
+ ☐ report bug for ActiveModel
+ ☐ place to put sort headers
