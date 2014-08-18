@@ -16,19 +16,22 @@ module PhiltreRails
       # and the code to do filtering and Sequel::Dataset manipulation
       require 'philtre.rb'
       require 'philtre/sequel_extensions.rb'
-      require 'philtre_model.rb'
     end
 
-    config.to_prepare do
-      # Called once in production, on each request during development
-      # Seems to be fine without it.
-      # require 'philtre_model.rb'
+    initializer "philtre-rails.active_model" do |app|
+      require 'philtre-rails/philtre_model.rb'
     end
 
     initializer "philtre-rails.view_helpers" do
       require 'philtre-rails/order_link.rb'
       require 'philtre-rails/philtre_view_helpers.rb'
       ActionView::Base.send :include, PhiltreViewHelpers
+    end
+
+    config.to_prepare do
+      # Called once in production, on each request during development
+      # Seems to be fine without it.
+      # require 'philtre_model.rb'
     end
   end
 end

@@ -4,7 +4,7 @@ require 'active_model'
 
 require 'philtre/filter.rb'
 
-require_relative '../lib/philtre_model.rb'
+require_relative '../lib/philtre-rails/philtre_model.rb'
 
 # spec/support/active_model_lint.rb
 # adapted from rspec-rails:
