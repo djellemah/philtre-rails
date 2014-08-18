@@ -35,8 +35,18 @@ shared_examples_for "ActiveModel" do
 end
 
 describe Philtre::Filter do
+
+  describe '#to_model' do
+    subject{ Philtre::Filter.new( one: 1, two: 2 ) }
+
+    it 'should raise exception' do
+      ->{subject.to_model}.should raise_error(/use for_form/i)
+    end
+  end
+
   describe '#for_form' do
     subject{ Philtre::Filter.new( one: 1, two: 2 ).for_form }
+
     it_should_behave_like("ActiveModel")
 
     it 'nil for not present' do
