@@ -1,5 +1,8 @@
 philtre-rails:
- ✔ railties so it can just be included @done (14-08-18 11:27)
- ☐ specs
- ☐ report bug for ActiveModel
- ✔ place to put sort headers @done (14-08-18 11:27)
+ ☐ report bug for ActiveModel?
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+ ✔ specs @done (14-08-18 12:53) @project(philtre-rails)
+ ✔ railties so it can just be included @done (14-08-18 11:27) @project(philtre-rails)
+ ✔ place to put sort headers @done (14-08-18 11:27) @project(philtre-rails)
