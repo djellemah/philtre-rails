@@ -1,4 +1,5 @@
 require 'ostruct'
+require 'philtre/filter.rb'
 
 class Philtre::Filter
   # These define the interface as used by the views.
@@ -16,7 +17,7 @@ class Philtre::Filter
     def to_key; nil; end
     def to_param; nil; end
     def errors; @errors ||= ActiveModel::Errors.new(self); end
-    def to_partial_path; 'filter'; end
+    def to_partial_path; self.class.model_name.param_key; end
     def to_model; self; end
   end
 
